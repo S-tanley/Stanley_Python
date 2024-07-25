@@ -18,7 +18,9 @@ class Solution(object):
     def MaxWeigtVal(self, a, n):
         res = -10**9
         # 这里想的是直接遍历，每种子序列
-        # 有点问题因为复杂度这样的话是O（2**n*n）
+        # 有点问题因为复杂度这样的话是O（2**n*n）‘
+        # 正常看到O（n**2）的话肯定是双循环，最开始也是这样想，但是最简单的双循环是连续子序列不是很对
+        # 应该有什么巧妙的比法，但是我算法题确实是没怎么做过，而且时间也不是很够了，想不太出来了
         for i in range(2**n):
             subsequence = []
             for j in range(n):
